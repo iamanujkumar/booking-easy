@@ -1,7 +1,8 @@
 import express,{Request,Response} from 'express';
 import multer from 'multer';
 import cloudinary from 'cloudinary';
-import Banket, { BanketsType } from '../Models/Banket';
+import Banket from '../Models/Banket';
+import {BanketsType} from '../VendorsType/BanquetType'
 import verifyToken from '../middleware/auth';
 import { body } from 'express-validator';
 
@@ -56,6 +57,16 @@ upload.array("imageFiles",6), async(req:Request, res:Response)=>{
     } catch (error) {
         console.log("Error creting bankets",error);
         res.status(500).json({message:"Something Went Wrong"});
+    }
+})
+
+router.get("/", verifyToken,async(req:Request, res:Response)=>{
+    try {
+        const bankets = await Banket.find({userId:req.userId})
+        res.json(bankets);
+        
+    } catch (error) {
+    res.status(500).json({message:"Error fetching hotels"})
     }
 })
 

@@ -4,6 +4,7 @@ import Register from "./Pages/Register";
 import SignIn from "./Pages/SignIn";
 import AddBanket from "./Pages/Banket";
 import { useAppContext } from "./contexts/AppContext";
+import MyBankets from "./Pages/MyBankets";
 
 function App() {
 
@@ -29,6 +30,13 @@ function App() {
           element={
             <Layout>
               <AddBanket/>
+            </Layout>
+          }/>
+          <Route 
+          path="/my-banquet"
+          element={
+            <Layout>
+              <MyBankets/>
             </Layout>
           }/>
           </>

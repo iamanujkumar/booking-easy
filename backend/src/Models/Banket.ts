@@ -1,19 +1,5 @@
 import mongoose from "mongoose";
-
-export type BanketsType = {
-    _id:string;
-    userId:string;
-    name:string;
-    city:string;
-    country:string
-    description:string;
-    facilities:string[];
-    starRating:string;
-    prices:string;
-    owner:string;
-    imageUrls:string[];
-    lastUpdated:Date;
-}
+import { BanketsType } from "../VendorsType/BanquetType";
 
 const banketSchema = new mongoose.Schema<BanketsType>({
     userId:{type: String, required:true},
@@ -27,6 +13,7 @@ const banketSchema = new mongoose.Schema<BanketsType>({
     owner:{type:String, required:true},
     imageUrls:[{type:String, required:true}],
     lastUpdated:{type:Date, required:true},
+
 })
 
 const Banket = mongoose.model<BanketsType>("Banket",banketSchema);
