@@ -5,6 +5,8 @@ import SignIn from "./Pages/SignIn";
 import AddBanket from "./Pages/Banket";
 import { useAppContext } from "./contexts/AppContext";
 import MyBankets from "./Pages/MyBankets";
+import UpdateBanquet from "./Pages/UpdateBanquet";
+import Home from './Pages/Home'
 
 function App() {
 
@@ -14,7 +16,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Layout>
-          <p>Home Page</p>
+          <Home/>
         </Layout>} />
         <Route path="/search" element={<Layout>
           <p>Search Page</p>
@@ -39,6 +41,14 @@ function App() {
               <MyBankets/>
             </Layout>
           }/>
+          <Route 
+          path="update-banquet/:banquetId"
+          element={
+            <Layout>
+              <UpdateBanquet/>
+            </Layout>
+          }/>
+
           </>
         )}
 

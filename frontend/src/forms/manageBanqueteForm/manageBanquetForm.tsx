@@ -2,6 +2,8 @@ import { FormProvider, useForm } from "react-hook-form";
 import DetailsSecion from "./DetailsSection";
 import Facilities from "./Facilities";
 import ImagesSection from "./imageSection";
+import { BanketsType } from "../../../../backend/src/VendorsType/BanquetType";
+import { useEffect } from "react";
 
 export type BanqueteFormData = {
     name:string;
@@ -14,20 +16,32 @@ export type BanqueteFormData = {
     owner:string;
     facilities:string[];
     imageFiles:FileList;
+    imageUrls:string[];
 
 }
 
 type Props = {
-    onSave:(banquetFormData:FormData)=> void
-    isLoading:boolean
+    banquet?: BanketsType;
+    onSave:(banquetFormData:FormData)=> void;
+    isLoading:boolean;
 }
 
-const ManageBanqueteForm = ({onSave, isLoading}:Props) =>{
+const ManageBanqueteForm = ({onSave, isLoading,banquet}:Props) =>{
     const formMethods = useForm<BanqueteFormData>();
 
-    const {handleSubmit} = formMethods;
+    const {handleSubmit, reset} = formMethods;
+    
+    useEffect(()=>{
+        reset(banquet);
+    },[banquet,reset]);
+
     const onSubmit = handleSubmit((formDataJson: BanqueteFormData)=>{
         const formData = new FormData();
+
+        if(banquet){
+            formData.append("banquetId",banquet._id);
+        }
+
         formData.append("name",formDataJson.name);
         formData.append("city",formDataJson.city);
         formData.append("country",formDataJson.country);
@@ -41,10 +55,21 @@ const ManageBanqueteForm = ({onSave, isLoading}:Props) =>{
             formData.append(`facilities[${index}]`,facility)
         })
         
+
+        
+
+        if(formDataJson.imageUrls){
+            formDataJson.imageUrls.forEach((url,index)=>{
+                formData.append(`imageUrls[${index}]`,url);
+            });
+        }
+
         Array.from(formDataJson.imageFiles).forEach((imageFile)=>{
             formData.append(`imageFiles`,imageFile);
 
         });
+
+
         onSave(formData)
     })
 

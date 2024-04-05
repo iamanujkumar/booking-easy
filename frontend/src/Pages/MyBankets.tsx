@@ -54,7 +54,7 @@ const MyBankets = ()=>{
 
                     
             <span className="flex justify-end">
-            <Link to={`/edit-banquet/${banquet._id}`} className="flex bg-red-600 text-white text-xl font-bold p-2 hover:bg-red-500">
+            <Link to={`/update-banquet/${banquet._id}`} className="flex bg-red-600 text-white text-xl font-bold p-2 hover:bg-red-500">
                 View Details
             </Link>
             </span>

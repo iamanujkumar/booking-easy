@@ -24,3 +24,26 @@ export const fetchMyBankets = async(): Promise<BanketsType[]>=>{
     }
     return response.json();
 }
+
+export const fetchMyBanketsById = async (banquetId:string):Promise<BanketsType>=>{
+    const response = await fetch(`${API_BASE_URL}/api/my-banket/${banquetId}`,{
+        credentials:'include'
+
+    })
+    if(!response.ok){
+        throw new Error("Error fetching banquet")
+    }
+    return response.json();
+};
+
+export const updateMyBanquetId = async (banquetFormData: FormData)=>{
+    const response = await fetch(`${API_BASE_URL}/api/my-banket/${banquetFormData.get("banquetId")}`,{
+        method:"PUT",
+        body: banquetFormData,
+        credentials: "include",
+    })
+    if(!response.ok){
+        throw new Error("Failed to update Banquet");
+    }
+    return response.json();
+}
