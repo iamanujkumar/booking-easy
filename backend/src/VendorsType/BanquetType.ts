@@ -6,8 +6,8 @@ export type BanketsType = {
     country:string
     description:string;
     facilities:string[];
-    starRating:string;
-    prices:string;
+    starRating:number;
+    prices:number;
     owner:string;
     imageUrls:string[];
     lastUpdated:Date;

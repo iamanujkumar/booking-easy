@@ -1,3 +1,4 @@
+
 import Slider from "react-slick";
 import EventCards from "./EventCard";
 import dj from '../../assets/dj.jpg'
