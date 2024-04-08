@@ -1,12 +1,12 @@
-// evet Cards.tsx
+// event Cards.tsx
 import React from "react";
 
-interface CityCardsProps {
+interface EventCardsProps {
   name: string;
   image: string;
 }
 
-const EventCards: React.FC<CityCardsProps> = ({ name, image }) => {
+const EventCards: React.FC<EventCardsProps> = ({ name, image }) => {
   return (
     <div className="w-full max-w-[70%] rounded-full shadow dark:bg-black dark:border-gray-700 overflow-hidden mr-0.5 transition-transform duration-300 hover:scale-95 hover:shadow-lg mb-4">
       <a href="#" className="block">

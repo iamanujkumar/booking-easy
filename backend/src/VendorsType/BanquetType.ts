@@ -11,4 +11,13 @@ export type BanketsType = {
     owner:string;
     imageUrls:string[];
     lastUpdated:Date;
+};
+
+export type BanquetSearchResponse = {
+    data: BanketsType[];
+    pagination:{
+        total:number;
+        page:number;
+        pages:number;
+    }
 }
