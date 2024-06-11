@@ -1,5 +1,5 @@
 
-import Hero from '../components/Hero'
+// import Hero from '../components/Hero'
 import EventsSlider from '../components/VenderCard/EventSider'
 import CoverPage from './CoverPage/CoverPage'
 
