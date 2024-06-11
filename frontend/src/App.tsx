@@ -7,6 +7,7 @@ import { useAppContext } from "./contexts/AppContext";
 import MyBankets from "./Pages/MyBankets";
 import UpdateBanquet from "./Pages/UpdateBanquet";
 import Home from './Pages/Home'
+import Search from "./Pages/SearchPage/Search";
 
 function App() {
 
@@ -18,8 +19,9 @@ function App() {
         <Route path="/" element={<Layout>
           <Home/>
         </Layout>} />
+
         <Route path="/search" element={<Layout>
-          <p>Search Page</p>
+          <Search/>
         </Layout>} />
 
         <Route path="/register" element={<Layout><Register/></Layout>} />

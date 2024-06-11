@@ -4,7 +4,7 @@ import { SlArrowRight } from "react-icons/sl";
 
 function Carousel({children:slides,
   autoSlide=false,
-  runtime=1000,
+  runtime=2000,
 }) {
   const [curr,setCurr]=useState(0);
 

@@ -72,10 +72,10 @@ const Hero = () => {
     //   </div>
     // </div>
     <div className="flex justify-center">
-      <div className="w-3/4">
+      <div className="w-full">
       <Carousel autoSlide={true}>
       {slides.map((s)=>(
-        <img src={s} />
+        <img className="h-96" src={s} />
       ))}
       </Carousel>
       
