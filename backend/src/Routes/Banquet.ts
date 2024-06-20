@@ -1,6 +1,7 @@
-import express, { Request, Response } from 'express';
+import express, { Request, Response, response } from 'express';
 import Banket from '../Models/Banket';
 import { BanquetSearchResponse } from '../VendorsType/BanquetType';
+import { param, validationResult } from 'express-validator';
 
 const router = express.Router();
 
@@ -47,6 +48,25 @@ router.get("/search", async (req: Request, res: Response) => {
         res.status(500).json({ message: "Something went wrong" });
     }
 });
+
+router.get("/:id", [
+    param("id").notEmpty().withMessage("Banquet id is required")
+], async (req: Request, res: Response) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+    }
+    const id = req.params.id.toString();
+    try {
+        const banquet = await Banket.findById(id);
+        res.json(banquet);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: "Error fetching banquet" });
+    }
+});
+
+
 
 const constructSearchQuery = (queryParams: any) => {
     let constructedQuery: any = {};

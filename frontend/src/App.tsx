@@ -8,6 +8,7 @@ import MyBankets from "./Pages/MyBankets";
 import UpdateBanquet from "./Pages/UpdateBanquet";
 import Home from './Pages/Home'
 import Search from "./Pages/SearchPage/Search";
+import BanquetDetail from "./Pages/DetailsPage/BanquetDetail";
 
 function App() {
 
@@ -22,6 +23,10 @@ function App() {
 
         <Route path="/search" element={<Layout>
           <Search/>
+        </Layout>} />
+
+        <Route path="/detail/:banquetId" element={<Layout>
+          <BanquetDetail/>
         </Layout>} />
 
         <Route path="/register" element={<Layout><Register/></Layout>} />

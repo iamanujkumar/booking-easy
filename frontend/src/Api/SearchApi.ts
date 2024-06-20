@@ -1,4 +1,5 @@
 import { BanquetSearchResponse } from "../../../backend/src/VendorsType/BanquetType";
+import {BanketsType} from "../../../backend/src/VendorsType/BanquetType"
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "" ;
 
@@ -30,6 +31,14 @@ export const searchBanquet = async (
 
     if(!responce.ok){
         throw new Error("Error fetching banquets");
+    }
+    return responce.json();
+}
+
+export const fetchBanquetById = async(banquetId: string): Promise<BanketsType>=>{
+    const responce = await fetch(`${API_BASE_URL}/api/banquets/${banquetId}`)
+    if(!responce.ok){
+        throw new Error("Error fetching Banquet");
     }
     return responce.json();
 }
