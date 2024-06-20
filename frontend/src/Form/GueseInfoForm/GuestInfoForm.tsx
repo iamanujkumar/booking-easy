@@ -21,7 +21,7 @@ const GuestInfoForm = ({banquetId, prices}: Props) =>{
     const location = useLocation();
 
     const { 
-        watch, register, handleSubmit, setValue, formState: {errors} 
+        watch, handleSubmit, setValue
     } = useForm<GuestInfoFormData>({
         defaultValues: {
             checkIn : search.checkIn,
