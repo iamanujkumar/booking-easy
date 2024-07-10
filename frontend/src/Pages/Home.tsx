@@ -1,6 +1,7 @@
 
 // import Hero from '../components/Hero'
-import EventsSlider from '../components/VenderCard/EventSider'
+// import EventsSlider from '../components/VenderCard/EventSider'
+import VendorList from '../components/VenderCard/vendors/vendors'
 import CoverPage from './CoverPage/CoverPage'
 
 const Home = () => {
@@ -8,8 +9,7 @@ const Home = () => {
     <div>
       {/* <Hero/>    */}
       <CoverPage/>
-      <EventsSlider/>
-      <EventsSlider/>
+      <VendorList/>
       
     </div>
   )
