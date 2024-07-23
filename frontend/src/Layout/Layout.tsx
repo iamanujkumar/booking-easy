@@ -1,7 +1,5 @@
 import Footer from "../components/Footer"
 import Header from "../components/Header"
-import SearchBar from "../components/VenderCard/SearchBar/SearchBar"
-
 interface Props {
     children:React.ReactNode
 }
