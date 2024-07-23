@@ -10,9 +10,9 @@ const Layout = ({children}:Props)=>{
     return(
         <div className="flex flex-col min-h-screen ">
             <Header/>
-            <div className="container mx-auto">
+            {/* <div className="container mx-auto">
                 <SearchBar/>
-            </div>
+            </div> */}
             <div className="container mx-auto flex-1">{children}</div>
             <Footer/>
         </div>

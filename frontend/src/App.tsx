@@ -9,6 +9,7 @@ import UpdateBanquet from "./Pages/UpdateBanquet";
 import Home from './Pages/Home'
 import Search from "./Pages/SearchPage/Search";
 import BanquetDetail from "./Pages/DetailsPage/BanquetDetail";
+import BanquetBooking from "./Pages/Booking/BanquetBooking";
 
 function App() {
 
@@ -34,6 +35,15 @@ function App() {
 
         {isLoggedIn && (
           <>
+
+          <Route 
+          path="/banquet/:banquetId/booking"
+          element={
+            <Layout>
+              <BanquetBooking/>
+            </Layout>
+          }/>
+
           <Route 
           path="/add-banquet"
           element={

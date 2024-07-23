@@ -16,10 +16,15 @@ type SearchContextProviderProps = {
 }
 
 export const SearchContextProvider = ({children}: SearchContextProviderProps) =>{
-    const [destination, setDestination] = useState<string>("")
-    const [checkIn, setCheckIn] = useState<Date>(new Date());
-    const [checkOut, setCheckOut] = useState<Date>(new Date());
-    const [banquetId, setBanquetId] = useState<string>("");
+    const [destination, setDestination] = useState<string>(()=> sessionStorage.getItem("destination") || 
+    "");
+    const [checkIn, setCheckIn] = useState<Date>(()=> new Date(sessionStorage.getItem("checkIn") ||
+    new Date().toISOString())
+);
+    const [checkOut, setCheckOut] = useState<Date>(()=> new Date(sessionStorage.getItem("checkOut") ||
+    new Date().toISOString())
+);
+    const [banquetId, setBanquetId] = useState<string>(()=> sessionStorage.getItem("banquetId") || "");
 
     const saveSearchValues = (destination:string, checkIn:Date, checkOut:Date, banquetId?: string)=>{
         setDestination(destination);
@@ -28,6 +33,15 @@ export const SearchContextProvider = ({children}: SearchContextProviderProps) =>
         if(banquetId){
             setBanquetId(banquetId);
         }
+        sessionStorage.setItem("destination",destination);
+        sessionStorage.setItem("checkIn",checkIn.toISOString());
+        sessionStorage.setItem("checkOut",checkOut.toISOString());
+        sessionStorage.setItem("destination",destination);
+
+        if(banquetId){
+            sessionStorage.setItem("banquetId", banquetId);
+        }
+        
     }
     return(
         <SearchContext.Provider value={{

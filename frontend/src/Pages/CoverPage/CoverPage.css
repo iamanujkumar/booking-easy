@@ -1,0 +1,58 @@
+.blure {
+    position: absolute;
+    width: 22rem;
+    height: 14rem;
+    border-radius: 50%;
+    background: #eeb6d9;
+    filter: blur(72px);
+    z-index: -9;
+    top: -18%;
+    left: 56%;
+  }
+
+  .typewriter {
+    overflow: hidden; /* Ensures the text is hidden by default */
+    white-space: nowrap; /* Prevents the text from wrapping */
+    border-right: 2px solid black; /* Adds a caret */
+    animation: typewriter 4s steps(44) 1s forwards, blinkCaret 0.75s step-end infinite;
+  }
+  
+  .typewriter-text {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+    animation-delay: 4s; /* Ensure this matches the typewriter animation duration */
+  }
+  
+  
+  @keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.i-desc span {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.i-desc span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.i-desc span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.i-desc span:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes typewriter {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+@keyframes blinkCaret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: black; }
+}

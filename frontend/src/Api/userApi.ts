@@ -1,7 +1,19 @@
+import { UserType } from "../../../backend/src/VendorsType/BanquetType";
 import { RegisterFormData } from "../Pages/Register"
 import { SignInFormData } from "../Pages/SignIn";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "" ;
+
+
+export const fetchCurrentUser = async (): Promise<UserType> =>{
+  const responce = await fetch(`${API_BASE_URL}/api/users/me`,{
+    credentials:"include"
+  })
+  if(!responce.ok){
+    throw new Error("Error fetching user")
+  }
+  return responce.json();
+}
 
 export const register = async (formData:RegisterFormData) =>{
         const responce = await fetch(`${API_BASE_URL}/api/users/register`,{

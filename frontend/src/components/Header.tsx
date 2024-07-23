@@ -6,7 +6,7 @@ const Header = () => {
   const { isLoggedIn } = useAppContext();
 
   return (
-    <div className="py-6" style={{ background: "rgb(255 58 90)"}}>
+    <div className="py-3 bg-gradient-to-r from-pink-500 via-purple-400 to-pink-500 ...">
       <div className="container mx-auto flex justify-between">
         <span className="text-3xl text-white font-bold tracking-tight">
           <Link to="/">BookingEasy.com</Link>
