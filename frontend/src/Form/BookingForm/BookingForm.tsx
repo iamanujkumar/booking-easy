@@ -12,7 +12,7 @@ type BookingFormData = {
 }
 
 const BookingForm = ({currentUser}:Props) => {
-    const { register} = useForm<BookingFormData>({
+    const { handleSubmit, register} = useForm<BookingFormData>({
         defaultValues:{
             firstName: currentUser.firstName,
             lastName: currentUser.lastName,
