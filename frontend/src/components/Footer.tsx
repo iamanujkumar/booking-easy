@@ -70,7 +70,7 @@ const Footer = () => {
           </div>
         </div>
         <p className="mt-8 text-xs text-gray-200">
-          © 2022 Booking Easy
+          © 2024 Booking Easy
         </p>
       </div>
     </footer>

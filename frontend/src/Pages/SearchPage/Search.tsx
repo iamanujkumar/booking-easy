@@ -1,7 +1,7 @@
 import { useQuery } from "react-query";
 import { useSearchContext } from "../../contexts/SearchContext";
 import * as apiClient from "../../Api/SearchApi";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SearchResultCard from "../../components/SearchResultCard/SearchResultCard";
 import Pagination from "../../components/Pagination/Pagination";
 import StarRatingFilter from "../../components/Filters/StarRatingFilter/StarRatingFilter";
@@ -32,6 +32,11 @@ const Search = () => {
         apiClient.searchBanquet(searchParams)
     );
 
+    // Use effect to scroll to top when banquetData changes
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scroll to top
+    }, [banquetData]); // Dependency on banquetData
+
     const handleStarChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const starRating = event.target.value;
 
@@ -54,58 +59,57 @@ const Search = () => {
 
     return (
         <div>
-            <SearchBar/>
+            <SearchBar />
             <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-5">
-            <div className="rounded-lg border border-slate-300 p-5 h-fit sticky top-10 ">
-                <div className="space-y-5">
-                    <h3 className="text-lg font-semibold border-b border-slate-300 pb-5">Filter by:</h3>
-                    <StarRatingFilter
-                        selectedStars={selectedStars}
-                        onChange={handleStarChange}
-                    />
-                    <FacilitiesFilter
-                        selectedFacilities={selectedFacilities}
-                        onChange={handleFacilityChange}
-                    />
-                    <PriceFilter
-                        selectedPrice={selectedPrice}
-                        onChange={(value?: number) => setSelectedPrice(value)}
-                    />
+                <div className="rounded-lg border border-slate-300 p-5 h-fit sticky top-10 ">
+                    <div className="space-y-5">
+                        <h3 className="text-lg font-semibold border-b border-slate-300 pb-5">Filter by:</h3>
+                        <StarRatingFilter
+                            selectedStars={selectedStars}
+                            onChange={handleStarChange}
+                        />
+                        <FacilitiesFilter
+                            selectedFacilities={selectedFacilities}
+                            onChange={handleFacilityChange}
+                        />
+                        <PriceFilter
+                            selectedPrice={selectedPrice}
+                            onChange={(value?: number) => setSelectedPrice(value)}
+                        />
+                    </div>
                 </div>
-            </div>
 
-            <div className="flex flex-col gap-5">
-                <div className="flex justify-between items-center">
-                    <span className="text-xl font-bold">
-                        {banquetData?.pagination.total} Banquets Found
-                        {search.destination ? ` in ${search.destination}` : ""}
-                    </span>
+                <div className="flex flex-col gap-5">
+                    <div className="flex justify-between items-center">
+                        <span className="text-xl font-bold">
+                            {banquetData?.pagination.total} Banquets Found
+                            {search.destination ? ` in ${search.destination}` : ""}
+                        </span>
 
-                    <select
-                        value={sortOption}
-                        onChange={(event) => setSortOption(event.target.value)}
-                        className="p-2 border rounded-md"
-                    >
-                        <option value="">Sort By</option>
-                        <option value="starRating">Star Rating</option>
-                        <option value="pricesAsc">Price (low to high)</option>
-                        <option value="pricesDesc">Price (high to low)</option>
-                    </select>
-                </div>
-                {banquetData?.data.map((banquet) => (
-                    <SearchResultCard key={banquet._id} banquet={banquet} />
-                ))}
-                <div>
-                    <Pagination
-                        page={banquetData?.pagination.page || 1}
-                        pages={banquetData?.pagination.pages || 1}
-                        onPageChange={(page) => setPage(page)}
-                    />
+                        <select
+                            value={sortOption}
+                            onChange={(event) => setSortOption(event.target.value)}
+                            className="p-2 border rounded-md"
+                        >
+                            <option value="">Sort By</option>
+                            <option value="starRating">Star Rating</option>
+                            <option value="pricesAsc">Price (low to high)</option>
+                            <option value="pricesDesc">Price (high to low)</option>
+                        </select>
+                    </div>
+                    {banquetData?.data.map((banquet) => (
+                        <SearchResultCard key={banquet._id} banquet={banquet} />
+                    ))}
+                    <div>
+                        <Pagination
+                            page={banquetData?.pagination.page || 1}
+                            pages={banquetData?.pagination.pages || 1}
+                            onPageChange={(page) => setPage(page)}
+                        />
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
-        
     );
 };
 

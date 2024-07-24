@@ -30,7 +30,7 @@ const SearchBar = () =>{
         <form onSubmit={handleSubmit} className="-mt-8 p-3 bg-gradient-to-r from-pink-300 rounded shadow-md grid grid-cols-2 lg:grid-cols-5 2xl:grid-cols-5 items-center gap-4">
             <div className="flex flex-row items-center flex-1 bg-white p-2">
                 <MdTravelExplore size={25} className="mr-2"/>
-                <input placeholder="Where are you going?" 
+                <input placeholder="Location ?" 
                 className="text-md w-full focus:outline-none"
                 value={destination}
                 onChange={(event)=> setDestination(event.target.value)}
