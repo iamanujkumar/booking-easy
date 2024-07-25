@@ -1,0 +1,73 @@
+[
+    {
+      "name": "Photography",
+      "icon": "FaCamera",
+      "path": "/photography"
+    },
+    {
+      "name": "Makeup Artist",
+      "icon": "FaPalette",
+      "path": "/makeup"
+    },
+    {
+      "name": "Wedding Car",
+      "icon": "FaCar",
+      "path": "/car"
+    },
+    {
+      "name": "Decorators",
+      "icon": "FaPaintBrush",
+      "path": "/decoration"
+    },
+    {
+      "name": "Banquets",
+      "icon": "FaHome",
+      "path": "/home"
+    },
+    {
+      "name": "Choreographer",
+      "icon": "FaRunning",
+      "path": "/dance"
+    },
+    {
+      "name": "Wedding Planner",
+      "icon": "FaBook",
+      "path": "/book"
+    },
+    {
+      "name": "Invitation Card",
+      "icon": "FaEnvelopeOpenText",
+      "path": "/Envelope"
+    },
+    {
+      "name": "Mehandi Artist",
+      "icon": "FaHandSparkles",
+      "path": "/Mehandi"
+    },
+    {
+      "name": "Wedding Wears",
+      "icon": "GiClothes",
+      "path": "/wear"
+    },
+    {
+      "name": "Caterers",
+      "icon": "FaBowlFood",
+      "path": "/book"
+    },
+    {
+      "name": "Jwellary",
+      "icon": "FaGem",
+      "path": "/Jwellary"
+    },
+    {
+      "name": "Dj",
+      "icon": "FaMusic",
+      "path": "/Dj"
+    },
+    {
+      "name": "Wedding Gift",
+      "icon": "FaGifts",
+      "path": "/gift"
+    }
+  ]
+  
