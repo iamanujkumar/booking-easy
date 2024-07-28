@@ -40,8 +40,9 @@ const Register = () => {
   });
 
   return (
-    <form className="flex flex-col gap-5" onSubmit={onSubmit}>
-      <h2 className="text-3xl font-bold">Create an Account</h2>
+    <form className="flex flex-col gap-5 m-auto mt-10 mb-10 w-[40%] border-2 border-pink-500 p-5 rounded-lg" 
+  style={{ boxShadow: '0 4px 6px -1px rgba(236, 72, 153, 0.5), 0 2px 4px -1px rgba(236, 72, 153, 0.5)' }}  onSubmit={onSubmit}>
+      <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 m-auto">Create an Account</h2>
       <div className="flex flex-col md:flex-row gap-5">
         <label className="text-gray-700 text-sm font-bold flex-1">
           First Name
@@ -112,12 +113,12 @@ const Register = () => {
         )}
       </label>
       <span>
-        <button
-          type="submit"
-          className="bg-blue-600 text-white p-2 font-bold hover:bg-blue-500 text-xl"
-        >
-          Create Account
-        </button>
+      <button
+  type="submit"
+  className="bg-blue-600 text-white p-2 font-bold text-xl rounded-lg hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500"
+>
+  Create Account
+</button>
       </span>
     </form>
   );

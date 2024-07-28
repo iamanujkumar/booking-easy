@@ -38,13 +38,16 @@ const SignIn = () => {
   });
 
   return (
-    <form className="flex flex-col gap-5" onSubmit={onSubmit}>
-      <h2 className="text-3xl font-bold">Sign In</h2>
+<form 
+  className="flex flex-col gap-5 m-auto mt-10 mb-10 w-[40%] border-2 border-pink-500 p-5 rounded-lg" 
+  style={{ boxShadow: '0 4px 6px -1px rgba(236, 72, 153, 0.5), 0 2px 4px -1px rgba(236, 72, 153, 0.5)' }} 
+  onSubmit={onSubmit}>
+      <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 m-auto">Sign In</h2>
       <label className="text-gray-700 text-sm font-bold flex-1">
         Email
         <input
           type="email"
-          className="border rounded w-full py-1 px-2 font-normal"
+          className="border rounded w-full py-2 px-3 font-normal focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent"
           {...register("email", { required: "This field is required" })}
         ></input>
         {errors.email && (
@@ -55,7 +58,7 @@ const SignIn = () => {
         Password
         <input
           type="password"
-          className="border rounded w-full py-1 px-2 font-normal"
+          className="border rounded w-full py-2 px-3 font-normal focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
           {...register("password", {
             required: "This field is required",
             minLength: {
@@ -68,21 +71,22 @@ const SignIn = () => {
           <span className="text-red-500">{errors.password.message}</span>
         )}
       </label>
-      <span className="flex items-center justify-between">
+      <span className="flex items-center justify-between mx-10 my-10">
         <span className="text-sm">
           Not Registered?{" "}
-          <Link className="underline" to="/register">
+          <Link className="underline text-pink-500 hover:text-purple-500" to="/register">
             Create an account here
           </Link>
         </span>
         <button
           type="submit"
-          className="bg-blue-600 text-white p-2 font-bold hover:bg-blue-500 text-xl"
-        >
+          className="bg-blue-600 text-white p-2 font-bold text-xl rounded-lg hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 font-mono"
+>
           Login
         </button>
       </span>
-    </form>
+</form>
+
   );
 };
 
