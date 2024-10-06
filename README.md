@@ -54,11 +54,10 @@ Here are some screenshots of the application:
 ## Technologies Used
 
 - **Frontend**: React.js, TypeScript, Tailwind CSS
-- **Backend**: Node.js, Express.js
+- **Backend**: TypeScript, Node.js, Express.js
 - **Database**: MongoDB
 - **Authentication**: JSON Web Tokens (JWT)
-- **Payment Integration**: Stripe (or any payment gateway you chose)
-
+- **Payment Integration**: Razorpay
 ## Installation
 
 To set up the project locally, follow these steps:
