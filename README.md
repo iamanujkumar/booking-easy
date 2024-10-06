@@ -43,7 +43,7 @@ Here are some screenshots of the application:
 *Search page for finding wedding services.*
 
 ### Search Result
-| <div style="text-align: center;"><h4>Image 1</h4><img src="https://drive.google.com/uc?id=1rGfNOpIrofV6nnUN40GsMQFNAupHBUeV" alt="Booking Process Step 1" width="100%" /></div> | <div style="text-align: center;"><h4>Image 2</h4><img src="https://drive.google.com/uc?id=1g3yWjbVhkREWrdS7tJ-fXzXtw_y7wSeh" alt="Booking Process Step 2" width="100%" /></div> |
+<div style="text-align: center;"><h4>Image 1</h4><img src="https://drive.google.com/uc?id=1rGfNOpIrofV6nnUN40GsMQFNAupHBUeV" alt="Booking Process Step 1" width="100%" /></div> <div style="text-align: center;"><h4>Image 2</h4><img src="https://drive.google.com/uc?id=1g3yWjbVhkREWrdS7tJ-fXzXtw_y7wSeh" alt="Booking Process Step 2" width="100%" /></div>
 
 
 
