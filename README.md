@@ -32,7 +32,7 @@ Here are some screenshots of the application:
 
 | Signup | Login |
 | ------ | ----- |
-| <div style="text-align: center;"><h4>Signup</h4><img src="https://drive.google.com/uc?id=13U-gY-qsMabl4voVHx_P5yHnzIfMsm9z" alt="Signup" width= 100% height="300"/><p>*Signup page for new users.*</p></div> | <div style="text-align: center;"><h4>Login</h4><img src="https://drive.google.com/uc?id=1Rp7zfzedhf80MwjvZIGv4pmKVM84kwm8" alt="Login" width="400" height="300"/><p>*Login page for users.*</p></div> |
+| <div style="text-align: center;"><h4>Signup</h4><img src="https://drive.google.com/uc?id=13U-gY-qsMabl4voVHx_P5yHnzIfMsm9z" alt="Signup" width= 100% height="300"/><p>*Signup page for new users.*</p></div> | <div style="text-align: center;"><h4>Login</h4><img src="https://drive.google.com/uc?id=1Rp7zfzedhf80MwjvZIGv4pmKVM84kwm8" alt="Login" width= 100%  height="300"/><p>*Login page for users.*</p></div> |
 
 
 
