@@ -38,21 +38,13 @@ Here are some screenshots of the application:
 
 
 
-### Service Search
+### All Venders
 ![Service Search](https://drive.google.com/uc?id=15HF2vEb-Fikxv2-pV17t-CTb6d-0H1JH)
 *Search page for finding wedding services.*
 
 ### Booking Process
-<div style="display: flex; justify-content: space-between; align-items: center;">
-    <div style="flex: 1; margin-right: 10px; text-align: center;">
-        <img src="https://drive.google.com/uc?id=1rGfNOpIrofV6nnUN40GsMQFNAupHBUeV" alt="Booking Process Step 1" style="width: 100%; max-width: 400px;"/>
-        <p>*Initial booking page for selected wedding services.*</p>
-    </div>
-    <div style="flex: 1; margin-left: 10px; text-align: center;">
-        <img src="https://drive.google.com/uc?id=1g3yWjbVhkREWrdS7tJ-fXzXtw_y7wSeh" alt="Booking Process Step 2" style="width: 100%; max-width: 400px;"/>
-        <p>*Final booking confirmation page.*</p>
-    </div>
-</div>
+| ------ | ----- |
+| <div style="text-align: center;"><h4>image1</h4><img src="https://drive.google.com/uc?id=1rGfNOpIrofV6nnUN40GsMQFNAupHBUeV" alt="Signup" width= 100% />/div> | <div style="text-align: center;"><h4>image2</h4><img src="https://drive.google.com/uc?id=1g3yWjbVhkREWrdS7tJ-fXzXtw_y7wSeh" alt="Login" width= 100% /></div> |
 
 
 ### Register as Vendor
