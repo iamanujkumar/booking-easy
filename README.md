@@ -8,10 +8,6 @@ A **user-friendly web application** designed to simplify the process of searchin
 - [Screenshots](#screenshots)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Future Enhancements](#future-enhancements)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
