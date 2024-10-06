@@ -26,16 +26,34 @@ A **user-friendly web application** designed to simplify the process of searchin
 
 Here are some screenshots of the application:
 
-![Homepage](https://drive.google.com/file/d/1Kkcoirh5XT-ZKLy2yXleKYRUu1htDTVF/view?usp=sharing)
+### Homepage
+![Homepage](https://drive.google.com/uc?id=1Kkcoirh5XT-ZKLy2yXleKYRUu1htDTVF)
 *Homepage showing the main features of the application.*
 
-![Service Search](path/to/screenshot2.png)
+### Login and Signup
+<div style="display: flex; justify-content: space-between;">
+    <div style="flex: 1; padding-right: 10px;">
+        <h4>Login</h4>
+        <img src="https://drive.google.com/uc?id=1Rp7zfzedhf80MwjvZIGv4pmKVM84kwm8" alt="Login" style="width: 100%;"/>
+        <p>*Login page for users.*</p>
+    </div>
+    <div style="flex: 1; padding-left: 10px;">
+        <h4>Signup</h4>
+        <img src="https://drive.google.com/uc?id=13U-gY-qsMabl4voVHx_P5yHnzIfMsm9z" alt="Signup" style="width: 100%;"/>
+        <p>*Signup page for new users.*</p>
+    </div>
+</div>
+
+### Service Search
+![Service Search](https://drive.google.com/uc?id=15HF2vEb-Fikxv2-pV17t-CTb6d-0H1JH)
 *Search page for finding wedding services.*
 
-![Booking Process](path/to/screenshot3.png)
+### Booking Process
+![Booking Process](https://drive.google.com/uc?id=1g3yWjbVhkREWrdS7tJ-fXzXtw_y7wSeh)
 *Booking page for selected wedding services.*
 
-![User Profile](path/to/screenshot4.png)
+### Register as Vendor
+![Register as Vendor](https://drive.google.com/uc?id=1kyejkklR96hms4bqEvsBUWy7gmILldJT)
 *User profile page showing booked services and preferences.*
 
 ## Technologies Used
