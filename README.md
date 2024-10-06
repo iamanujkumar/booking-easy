@@ -51,17 +51,14 @@ Here are some screenshots of the application:
 ### Booking Process
 <div style="display: flex; justify-content: space-between;">
     <div style="flex: 1; margin-right: 10px; text-align: center;">
-        <h4>Booking Process - Step 1</h4>
-        <img src="https://drive.google.com/uc?id=1rGfNOpIrofV6nnUN40GsMQFNAupHBUeV" alt="Booking Process Step 1" style="width: 100%;"/>
+        <img src="https://drive.google.com/uc?id=1rGfNOpIrofV6nnUN40GsMQFNAupHBUeV" alt="Booking Process Step 1" style="width: 50%;"/>
         <p>*Initial booking page for selected wedding services.*</p>
     </div>
     <div style="flex: 1; margin-left: 10px; text-align: center;">
-        <h4>Booking Process - Step 2</h4>
-        <img src="https://drive.google.com/uc?id=1g3yWjbVhkREWrdS7tJ-fXzXtw_y7wSeh" alt="Booking Process Step 2" style="width: 100%;"/>
+        <img src="https://drive.google.com/uc?id=1g3yWjbVhkREWrdS7tJ-fXzXtw_y7wSeh" alt="Booking Process Step 2" style="width: 50%;"/>
         <p>*Final booking confirmation page.*</p>
     </div>
 </div>
-*Booking page for selected wedding services.*
 
 ### Register as Vendor
 ![Register as Vendor](https://drive.google.com/uc?id=1kyejkklR96hms4bqEvsBUWy7gmILldJT)
