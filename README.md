@@ -26,7 +26,7 @@ A **user-friendly web application** designed to simplify the process of searchin
 
 Here are some screenshots of the application:
 
-![Homepage](https://drive.google.com/file/d/1Kkcoirh5XT-ZKLy2yXleKYRUu1htDTVF/view?usp=sharing)
+![Homepage]()
 *Homepage showing the main features of the application.*
 
 ![Service Search](path/to/screenshot2.png)
