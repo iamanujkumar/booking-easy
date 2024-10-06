@@ -64,10 +64,10 @@ To set up the project locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/wedding-services-booking.git
+   git clone https://github.com/iamanujkumar/booking-easy
    cd wedding-services-booking
 
 
 ### Key Additions
-- **Environment Variables Section**: The application requires a .env file for configuration. Please contact me at anujkmar@gmail.com to obtain the necessary file.
+- **Environment Variables Section**: The application requires a .env file for configuration. Please contact me at anujkmar73889@gmail.com to obtain the necessary file.
 
