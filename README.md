@@ -32,12 +32,12 @@ Here are some screenshots of the application:
 
 ### Login and Signup
 <div style="display: flex; justify-content: space-between;">
-    <div style="flex: 1; padding-right: 10px;">
+    <div style="flex: 1; margin-right: 10px; text-align: center;">
         <h4>Login</h4>
         <img src="https://drive.google.com/uc?id=1Rp7zfzedhf80MwjvZIGv4pmKVM84kwm8" alt="Login" style="width: 100%;"/>
         <p>*Login page for users.*</p>
     </div>
-    <div style="flex: 1; padding-left: 10px;">
+    <div style="flex: 1; margin-left: 10px; text-align: center;">
         <h4>Signup</h4>
         <img src="https://drive.google.com/uc?id=13U-gY-qsMabl4voVHx_P5yHnzIfMsm9z" alt="Signup" style="width: 100%;"/>
         <p>*Signup page for new users.*</p>
